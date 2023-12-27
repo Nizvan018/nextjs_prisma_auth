@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input {
+    @apply w-full p-2 text-sm rounded-lg border-b border-black/0 duration-300 outline-none focus:border-black/20 focus:shadow-lg
+}
+
+h1 {
+    @apply text-3xl font-bold
+}
+
+.button-black {
+    @apply py-3 text-white text-xs font-semibold rounded-lg bg-black duration-300 hover:bg-gray-900 hover:shadow-md
+}
+
+.button-white {
+    @apply py-3 border-b border-gray-300 text-black text-xs font-semibold rounded-lg bg-white duration-200 hover:shadow-md
+}
