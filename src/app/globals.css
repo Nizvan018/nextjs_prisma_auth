@@ -6,6 +6,10 @@ input {
     @apply w-full p-2 text-sm rounded-lg border-b border-black/0 duration-300 outline-none focus:border-black/20 focus:shadow-lg
 }
 
+label {
+    @apply pl-2 text-gray-600 text-xs font-semibold
+}
+
 h1 {
     @apply text-3xl font-bold
 }
