@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import { Toaster } from 'sonner';
-import { register_user } from '../controller';
+import { register_user, login_user } from '../controller';
 
 function RegisterPage() {
     const router = useRouter();
@@ -15,7 +15,11 @@ function RegisterPage() {
         const res = await register_user(data);
 
         if (res.ok) {
-            router.push('/auth/login');
+            const res_user = await login_user(data);
+
+            if (res_user.ok) {
+                router.push('/dashboard');
+            }
         }
     });
 
