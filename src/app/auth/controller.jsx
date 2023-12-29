@@ -3,6 +3,10 @@ import { signIn } from 'next-auth/react';
 
 /** Método para realizar el fetch para registrar usuarios en la base de datos */
 export const register_user = async (data) => {
+    toast.promise(new Promise((resolve) => setTimeout(() => resolve(), 2000)), {
+        loading: 'Creating user...'
+    })
+
     const res = await fetch('/api/auth/register', {
         method: 'POST',
         headers: {
